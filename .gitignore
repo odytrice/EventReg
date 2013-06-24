@@ -1,3 +1,6 @@
+logs/*
+!.gitkeep
+.idea
 lib-cov
 *.seed
 *.log
