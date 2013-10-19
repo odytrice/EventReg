@@ -28,3 +28,8 @@
   content: "";
   padding: 0;
 }
+
+.votingButton {
+    text-align: center;
+    cursor: pointer;
+}
