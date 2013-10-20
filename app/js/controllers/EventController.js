@@ -3,9 +3,10 @@
 eventsApp.controller('EventController',
     function ($scope) {
         $scope.mystyle = {color: "red"};
+        $scope.sortOrder = 'name';
         $scope.event = {
             name: "Angular Boot Camp",
-            date: '1/1/2013',
+            date: 1359781015626,
             time: '10:30 am',
             location: {
                 address: 'Google Headquarters',
