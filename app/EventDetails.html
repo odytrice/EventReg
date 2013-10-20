@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
     <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body>
+<body ng-cloak>
 
 <div class="container">
     <div class="navbar">
@@ -22,7 +22,7 @@
 
         <div class="row">
             <div class="span11">
-                <h2>{{event.name}}</h2>
+                <h2 ng-style="mystyle" ng-bind-template="{{event.name}} {{event.date}}"></h2>
             </div>
         </div>
         <div class="row">
