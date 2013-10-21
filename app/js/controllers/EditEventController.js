@@ -2,8 +2,11 @@
 
 eventsApp.controller('EditEventController',
     function EditEventController($scope) {
-        $scope.saveEvent = function (event) {
-            alert(event.name);
+        $scope.saveEvent = function (event, newEventForm) {
+            if (newEventForm.$valid) {
+                console.log(newEventForm);
+                alert(event.name);
+            }
         }
 
         $scope.cancelEdit = function () {
