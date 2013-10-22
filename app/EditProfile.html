@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+    <meta charset="utf-8">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+<div class="container-fluid" ng-controller="EditProfileController">
+    <form name="profileForm">
+        <div class="row-fluid">
+            <div class="span3">
+                <img ng-src="{{getGravatarUrl(user.emailAddress)}}"/>
+            </div>
+            <div class="span3">
+                <fieldset>
+                    <label for="userName">User Name:</label>
+                    <input focus id="userName" required ng-pattern="/^[-A-Za-z0-9]{2,20}$/" type="text"
+                           placeholder="Username" ng-model="user.userName"/>
+                    <label for="password">Password:</label>
+                    <input id="password" required type="password" placeholder="Password" ng-model="user.password"/>
+                </fieldset>
+                <div style="margin-top: 15px">
+                    <fieldset>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Name" ng-model="user.name"/>
+                        <label for="emailAddress">Email Address:</label>
+                        <input id="emailAddress" type="email" placeholder="Email Address" ng-model="user.emailAddress"/>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span6 offset3">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" rows="6" style="width: 97%; color: #52575c" placeholder="Bio"
+                          ng-model="user.bio"></textarea>
+                <button class="btn btn-primary" ng-click="">Cancel</button>
+                <button type="submit" ng-click="" class="btn pull-right">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="lib/jquery-2.0.2.js"></script>
+<script type="text/javascript" src="lib/underscore.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+
+<script type="text/javascript" src="lib/angular/angular.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers/EditProfileController.js"></script>
+<script type="text/javascript" src="js/services/Crypto.js"></script>
+<script type="text/javascript" src="js/services/Gravatar.js"></script>
+<script type="text/javascript" src="js/filters.js"></script>
+
+</body>
+</html>
